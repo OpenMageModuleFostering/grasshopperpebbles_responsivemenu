@@ -14,9 +14,9 @@ $active_class = Mage::getStoreConfig('responsivemenu/additional_settings/active_
 $show_close_button = Mage::getStoreConfig('responsivemenu/additional_settings/show_close_button');
 ?>
 <script type="text/javascript">
-var jqRm17 = jQuery.noConflict(true);
-(function ($) {
-$(document).ready(function() {
+jQuery.noConflict();
+
+jQuery(document).ready(function($) {
 	var queries = <?php echo Mage::getStoreConfig('responsivemenu/media_query_settings/media_queries'); ?>;
 	var q_modes = queries.query_modes;
 	
@@ -56,5 +56,4 @@ $(document).ready(function() {
 	}*/
     
 });
-}(jqRm17));
 </script>

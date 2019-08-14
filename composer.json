@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Display Responsive Menu with using media queries. Multiple options including select, vertical, split-view.",
+    "description": "Responsive Menu with using media queries. Multiple options including select, vertical, split-view.",
     "authors": [
     {
         "name": "Les Green",
