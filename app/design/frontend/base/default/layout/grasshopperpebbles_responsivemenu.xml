@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+ <default>
+ 	<reference name="head">
+		<action method="addCss"><stylesheet>css/grasshopperpebbles_responsivemenu/responsivemenu.css</stylesheet></action>
+		<action method="addCss"><stylesheet>css/grasshopperpebbles_responsivemenu/responsivemenu-icons.css</stylesheet></action>
+		<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.1.min.js</name></action>	
+		<action method="addItem"><type>skin_js</type><name>js/jquery.gpresponsivemenu.min.js</name></action>
+		<block type="core/template" name="responsivemenu_settings" template="responsivemenu/settings.phtml" />
+	</reference>
+</default>	
+</layout>

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+
+<config>
+    <sections>
+        <responsivemenu translate="label" module="responsivemenu">
+            <label>GrasshopperPebbles Responsive Menu</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+                <nav_settings translate="label">
+                    <label>Navigation Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+					 	<current_nav_parent translate="label">
+                            <label>Current Navigation Parent</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The parent container for the existing menu.</comment>
+                        </current_nav_parent>
+                        <nav_container_parent translate="label">
+                            <label>Current Navigation</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The container for the existing menu.</comment>
+                        </nav_container_parent>
+					 	<nav_parent translate="label">
+                            <label>Navigation Parent</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                            <comment>The container where the responsive menu will be placed.</comment>
+                        </nav_parent>
+                        <nav_position translate="label">
+                            <label>Navigation Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>responsivemenu_adminhtml/system_config_source_navposition</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Whether the navigation menu will be the first or last element in the container.</comment>
+                        </nav_position> 
+                        <show_nav_caret translate="label">
+                            <label>Show Nav Caret</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Whether to display a caret to the right of the menu items that have sub-menus.</comment>
+                        </show_nav_caret>
+                    </fields>
+                </nav_settings>
+                <nav_toggle_settings translate="label">
+                    <label>Nav Toggle Button Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+                        <nav_toggle_type translate="label">
+                            <label>Nav Toggle Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>responsivemenu_adminhtml/system_config_source_navtoggletype</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Select whether to display an icon or text.</comment>
+                        </nav_toggle_type>
+                        <nav_toggle_icon_class translate="label">
+                            <label>Nav Toggle Icon Class</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><nav_toggle_type>icon</nav_toggle_type></depends>
+                            <comment>See the file responsivemenu-icons.css to view other icon color options.</comment>
+                        </nav_toggle_icon_class>  
+                        <nav_toggle_text translate="label">
+                            <label>Nav Toggle Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><nav_toggle_type>text</nav_toggle_type></depends>
+                        </nav_toggle_text>
+                        <show_nav_toggle_caret translate="label">
+                            <label>Show Nav Toggle Caret</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Whether to display a caret to the right of the toggle button menu text.</comment>
+                            <depends><nav_toggle_type>text</nav_toggle_type></depends>
+                        </show_nav_toggle_caret>
+                        <nav_toggle_parent translate="label">
+                            <label>Nav Toggle Parent</label>
+                            <comment>By default, the toggle button will be placed in the same container as the navigation menu. Set this value if you want the button to be placed in a different location.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_toggle_parent>
+                        <nav_toggle_position translate="label">
+                            <label>Nav Toggle Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>responsivemenu_adminhtml/system_config_source_navposition</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Whether the toggle button will be the first or last element in the container.</comment>
+                        </nav_toggle_position>
+                	</fields>                	
+                </nav_toggle_settings>
+                <additional_settings translate="label">
+                    <label>Additional Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+                        <page_wrapper translate="label">
+                            <label>Page Wrapper</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Used with SplitView mode. The container for all content on the page.</comment>
+                        </page_wrapper>
+                        <parent_menu_prefix translate="label">
+                            <label>Parent Menu Prefix</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>When a menu item has children, but also has a url, the menu item will be added a child with this prefix.</comment>
+                        </parent_menu_prefix>  
+                        <active_class translate="label">
+                            <label>Active Class</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Used with SplitView and parent menu items.</comment>
+                        </active_class>
+                        <show_close_button translate="label">
+                            <label>Show Close Button</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Used with SplitView mode. Whether to display a close button above the SplitView menu panel.</comment>
+                        </show_close_button>
+                	</fields>                	
+                </additional_settings>
+                <media_query_settings translate="label">
+                    <label>Media Query Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					 <fields>
+					 	<media_query_selection translate="label">
+                            <frontend_model>responsivemenu/adminhtml_system_config_form_field_mediaqueries</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </media_query_selection>
+						<media_queries>
+							<label>Media Queries</label>
+							<frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</media_queries>
+                	</fields>
+                	<comment><![CDATA[
+								<p>Styling examples for each mode can be found in css/grasshopperpebbles_ressponsivemenu/example_css.</p>
+								]]></comment>
+                </media_query_settings>
+			</groups>
+        </responsivemenu>
+    </sections>
+</config>

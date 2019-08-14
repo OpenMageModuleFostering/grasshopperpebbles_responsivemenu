@@ -1,0 +1,60 @@
+<?php
+
+$nav_parent = Mage::getStoreConfig('responsivemenu/nav_settings/nav_parent');
+$current_nav_parent = Mage::getStoreConfig('responsivemenu/nav_settings/current_nav_parent');
+$nav_container_parent = Mage::getStoreConfig('responsivemenu/nav_settings/nav_container_parent');
+$nav_toggle_type = Mage::getStoreConfig('responsivemenu/nav_toggle_settings/nav_toggle_type');
+$icon_class = Mage::getStoreConfig('responsivemenu/nav_toggle_settings/nav_toggle_icon_class');
+$nav_toggle_text = Mage::getStoreConfig('responsivemenu/nav_toggle_settings/nav_toggle_text');
+$nav_toggle_parent = Mage::getStoreConfig('responsivemenu/nav_toggle_settings/nav_toggle_parent');
+$show_nav_toggle_caret = Mage::getStoreConfig('responsivemenu/nav_toggle_settings/show_nav_toggle_caret');
+$page_wrapper = Mage::getStoreConfig('responsivemenu/additional_settings/page_wrapper');
+$parent_menu_prefix = Mage::getStoreConfig('responsivemenu/additional_settings/parent_menu_prefix');
+$active_class = Mage::getStoreConfig('responsivemenu/additional_settings/active_class');
+$show_close_button = Mage::getStoreConfig('responsivemenu/additional_settings/show_close_button');
+?>
+<script type="text/javascript">
+var jqRm17 = jQuery.noConflict(true);
+(function ($) {
+$(document).ready(function() {
+	var queries = <?php echo Mage::getStoreConfig('responsivemenu/media_query_settings/media_queries'); ?>;
+	var q_modes = queries.query_modes;
+	
+	$('<?php echo $current_nav_parent; ?>').gpResponsiveMenu({
+		nav_container_parent: '<?php echo $nav_container_parent; ?>',
+		nav_parent: '<?php echo $nav_parent; ?>',
+		nav_position: '<?php echo Mage::getStoreConfig('responsivemenu/nav_settings/nav_position'); ?>',
+		show_nav_caret: Boolean(<?php echo Mage::getStoreConfig('responsivemenu/nav_settings/show_nav_caret'); ?>),
+		show_nav_toggle_caret: Boolean(<?php echo Mage::getStoreConfig('responsivemenu/nav_toggle_settings/show_nav_toggle_caret'); ?>),
+		<?php if ($icon_class): ?>
+		nav_toggle_icon_class: '<?php echo $icon_class; ?>',
+		<?php else: ?>
+		nav_toggle_text: '<?php echo $nav_toggle_text; ?>',
+		show_nav_toggle_caret: Boolean(<?php echo $show_nav_toggle_caret; ?>),
+		<?php endif; ?>
+		<?php if ($nav_toggle_parent): ?>
+		nav_toggle_parent: '<?php echo $nav_toggle_parent; ?>',
+		<?php endif; ?>
+		nav_toggle_position: '<?php echo Mage::getStoreConfig('responsivemenu/nav_toggle_settings/nav_toggle_position'); ?>',
+		page_wrapper: '<?php echo $page_wrapper; ?>',
+		parent_menu_prefix: '<?php echo $parent_menu_prefix; ?>',
+		active_class: '<?php echo $active_class; ?>',
+		show_close_btn: Boolean(<?php echo $show_close_button; ?>),
+		media_query_modes: q_modes
+	});
+	/*$(window).resize(function() {
+		checkPageWidth();
+	});
+	checkPageWidth();
+	function checkPageWidth() {
+		var currentWidth = $j(window).width();
+		if (currentWidth <= 767) {
+			$('.col2-left-layout .col-left').insertBefore('.col2-left-layout .col-main');
+		} else {
+			$('.col2-left-layout .col-left').insertAfter('.col2-left-layout .col-main');
+		}
+	}*/
+    
+});
+}(jqRm17));
+</script>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Grasshopperpebbles_Responsivemenu",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Display Responsive Menu with using media queries. Multiple options including select, vertical, split-view.",
+    "authors": [
+    {
+        "name": "Les Green",
+        "email": "lesgreen@grasshopperpebbles.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

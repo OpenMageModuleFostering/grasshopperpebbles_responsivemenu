@@ -1,0 +1,7 @@
+#responsivemenu_media_query_settings table.form-list {width:100%;}
+#row_responsivemenu_media_query_settings_media_query_selection td.value {width:55%;}
+#responsivemenu_media_query_settings .form-list td.value select {width:180px;}
+#query-mode-table {width:100%; margin-top:10px;}
+#query-mode-table th {background-color:#6f8992; color:#fff;}
+#row_responsivemenu_media_query_settings_media_queries {display:none;}
+.media-query-row-delete {cursor:pointer;}

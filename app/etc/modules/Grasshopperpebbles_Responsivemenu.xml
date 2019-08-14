@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Grasshopperpebbles_Responsivemenu>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Grasshopperpebbles_Responsivemenu>
+    </modules>
+</config> 
