@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Grasshopperpebbles_Responsivemenu",
+    "name": "openmage-module-fostering\/grasshopperpebbles_responsivemenu",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Responsive Menu with using media queries. Multiple options including select, vertical, split-view.",
     "authors": [
